@@ -1,3 +1,12 @@
+/*
+ * @Author: 王宇
+ * @Date: 2024-07-16 17:47:13
+ * @LastEditors: 王宇
+ * @LastEditTime: 2024-07-16 17:48:47
+ * @FilePath: /testApi/index.js
+ * @Description: 
+ * 
+ */
 const Koa = require("koa");
 const Router = require("koa-router");
 const logger = require("koa-logger");
@@ -57,11 +66,11 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-const port = process.env.PORT || 80;
+const port = 81;
 async function bootstrap() {
   await initDB();
-  app.listen(port, () => {
-    console.log("启动成功", port);
+  app.listen(81, () => {
+    console.log("启动成功", 81);
   });
 }
 bootstrap();
